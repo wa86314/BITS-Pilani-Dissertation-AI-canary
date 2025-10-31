@@ -7,14 +7,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: dissertation-ai
+      app: dissertation-ai-canary
   template:
     metadata:
       labels:
-        app: dissertation-ai
+        app: dissertation-ai-canary
     spec:
       containers:
-      - name: dissertation-ai
+      - name: dissertation-ai-canary
         image: bits2025.azurecr.io/bits-pilani-dissertation-ai:103-1e30cf
         imagePullPolicy: Always
         ports:
