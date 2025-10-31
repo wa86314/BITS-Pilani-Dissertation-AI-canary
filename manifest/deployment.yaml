@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dissertation-ai
+  namespace : bits-dissertation
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dissertation-ai
+  template:
+    metadata:
+      labels:
+        app: dissertation-ai
+    spec:
+      containers:
+      - name: dissertation-ai
+        image: bits2025.azurecr.io/bits-pilani-dissertation-ai:103-1e30cf
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8888
+      imagePullSecrets:
+      - name: azure-bits-test-local
