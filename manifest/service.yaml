@@ -8,5 +8,5 @@ spec:
   selector:
     app: dissertation-ai-canary
   ports:
-    - port: 8888
+    - port: 80
       targetPort: 8888
