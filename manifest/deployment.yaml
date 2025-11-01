@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dissertation-ai
+  name: dissertation-ai-canary
   namespace : bits-dissertation
 spec:
   replicas: 1
