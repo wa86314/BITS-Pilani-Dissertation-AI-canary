@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/canary: "true"
+    nginx.ingress.kubernetes.io/canary-weight: "100"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: dissertation-ai-canary
+  namespace: bits-dissertation
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: myapp.48.216.190.57.nip.io
+    http:
+      paths:
+      - backend:
+          service:
+            name: dissertation-ai-canary
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
