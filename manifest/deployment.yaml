@@ -4,7 +4,7 @@ metadata:
   name: dissertation-ai-canary
   namespace : bits-dissertation
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: dissertation-ai-canary
