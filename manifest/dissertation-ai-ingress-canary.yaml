@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   annotations:
     nginx.ingress.kubernetes.io/canary: "true"
-    nginx.ingress.kubernetes.io/canary-weight: "100"
+    nginx.ingress.kubernetes.io/canary-weight: "0"
     nginx.ingress.kubernetes.io/rewrite-target: /
   name: dissertation-ai-canary
   namespace: bits-dissertation
