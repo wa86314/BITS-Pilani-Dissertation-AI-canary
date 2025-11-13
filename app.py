@@ -7,7 +7,7 @@ fill_mask = pipeline("fill-mask", model="bert-base-uncased")
 
 @app.get("/")
 def root():
-    return {"status": "Cana Service is up and running"}
+    return {"status": "<canary> Service is up and running"}
 
 @app.get("/predict",response_class=HTMLResponse)
 def predict(text: str):
